@@ -1,7 +1,6 @@
 {
   "name": "chicharron",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,10 +10,14 @@
     "url": "git+https://github.com/massicollado/chicharron.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "massicollado",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/massicollado/chicharron/issues"
   },
-  "homepage": "https://github.com/massicollado/chicharron#readme"
+  "homepage": "https://github.com/massicollado/chicharron#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "description": ""
 }
