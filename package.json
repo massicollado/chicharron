@@ -4,6 +4,8 @@
   "main": "index.js",
   "scripts": {
     "transpilajs": "gulp transpilajs",
+    "minificahtml": "gulp minificahtml",
+    "minificascss": "gulp minificascss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +26,8 @@
     "@babel/register": "^7.4.4",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2"
   },
   "description": ""
