@@ -7,6 +7,7 @@ var postcss = require('gulp-postcss');
 var cssnano = require('cssnano');
 var autoprefixer = require('autoprefixer');
 const { parallel } = require('gulp');
+var browserSync = require('browser-sync').create();
 
 gulp.task('transpilajs', () =>
     gulp.src('src/js/*.js') //directorio origen
@@ -34,5 +35,19 @@ gulp.task('minificahtml', () => {
       .pipe(gulp.dest('dist/scss'));
   });
 
+  //Ejecuta paralelamente las tareas anteriores
   gulp.task('build', gulp.parallel("transpilajs", "minificascss", "minificahtml"));
   
+  gulp.task('serveinit',  () =>{
+    browserSync.init({server: 'dist', port: 9000});
+    });
+
+    gulp.task('watcher', ()=>{
+    
+        gulp.watch('src/scss/*.scss', gulp.series('minificascss')).on('change',  browserSync.reload);
+        gulp.watch('src/js/*.js', gulp.series('transpilajs')).on('change',  browserSync.reload);
+        gulp.watch('src/htlm/*.html', gulp.series('minificahtml')).on('change', browserSync.reload);
+      
+    });
+
+    gulp.task('serve', gulp.series('build', 'serveinit', 'watcher'));
