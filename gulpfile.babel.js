@@ -21,7 +21,7 @@ gulp.task('transpilajs', () =>
 gulp.task('minificahtml', () => {
     return gulp.src('src/html/*.html')
       .pipe(htmlmin({ collapseWhitespace: true }))
-      .pipe(gulp.dest('dist/html'));
+      .pipe(gulp.dest('dist'));
   });
 
   gulp.task('minificascss', function () {
@@ -29,7 +29,7 @@ gulp.task('minificahtml', () => {
         autoprefixer({browsers: ['last 1 version']}),
         cssnano()
     ];
-    return gulp.src('src/scss/*.scss')
+    return gulp.src('src/scss/main.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(postcss(plugins))
       .pipe(gulp.dest('dist/scss'));
@@ -38,15 +38,16 @@ gulp.task('minificahtml', () => {
   //Ejecuta paralelamente las tareas anteriores
   gulp.task('build', gulp.parallel("transpilajs", "minificascss", "minificahtml"));
   
-  gulp.task('serveinit',  () =>{
-    browserSync.init({server: 'dist', port: 9000});
+  gulp.task('serveinit', (done) =>{
+    browserSync.init({server: "dist", port: 9000});
+    done();
     });
 
     gulp.task('watcher', ()=>{
     
-        gulp.watch('src/scss/*.scss', gulp.series('minificascss')).on('change',  browserSync.reload);
+        gulp.watch('src/scss/**/*.scss', gulp.series('minificascss')).on('change',  browserSync.reload);
         gulp.watch('src/js/*.js', gulp.series('transpilajs')).on('change',  browserSync.reload);
-        gulp.watch('src/htlm/*.html', gulp.series('minificahtml')).on('change', browserSync.reload);
+        gulp.watch('src/html/*.html', gulp.series('minificahtml')).on('change', browserSync.reload);
       
     });
 
