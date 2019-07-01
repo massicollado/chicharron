@@ -1,48 +1,96 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<title>Titulo de la web| Menos de 55 caddracteres</title>
-<meta charset="utf-8" />
-<meta name="description" content="Debe contener las palabras clave, tratar de atraer clicks y de longitud entre 150 y 160 caracteres">
-<link rel="stylesheet" href="/scss/main.css">
-</head>
- 
-<body>
-   
-    <header>
-       <h2>DREAMSHARE</h2>
-       <button>Log in</button>
-       <button>Sign up</button>
-       <h1>SHARE YOU HOLIDAY DREAM</h1>
-       <button>Find your holiday partner</button>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="/img/airplane.png" />
+    <title>DREAMSHARE</title>
+    <link rel="stylesheet" href="/scss/main.css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <div>
+        <nav>
+          <h2>DREAMSHARE</h2>
+          <button>Log in</button>
+          <button>Sign up</button>
+        </nav>
+        <div>
+          <hgroup>
+            <h1>Share Your Holiday Drean</h1>
+            <h3>And find the perfect partner to fulfill it</h3>
+          </hgroup>
+
+          <button>Find your holiday partner</button>
+        </div>
+      </div>
     </header>
- 
-    <footer class="contenedor">
-            <div class="item"> </div>
-        <div class="item"> 
-            <h3 class="dream">DREAMSHARE</h3>
+    <main>
+      <section>
+        <article>
+          <header>
+            <h1>How it works?</h1>
+          </header>
+          <div></div>
+        </article>
+
+        <article>
+          <header>
+            <h1>Meet a partner for your best</h1>
+          </header>
+          <div></div>
+          <button>See other Partners</button>
+        </article>
+        <article>
+          <header>
+            <h1>Discover holiday activity <span>ideas</span></h1>
+          </header>
+          <div></div>
+        </article>
+        <article id="interests">
+          <header>
+            <h1>Create your holiday<span> activity</span></h1>
+          </header>
+          <form>
+            <label for="interest">Hi! What are your holiday interests?</label>
+            <div>
+              <input id= "interest"type="text" placeholder="Enter your interests" />
+              <button class="button filled">Search Partners</button>
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="flex wrap justify-content__space-between width-limiter">
+        <span id="company-title">DREAMSHARE</span>
+
+        <div id="options">
+          <span class="title-list">Company</span>
+          <ul class="no-margin no-padding">
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/press">Press</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/terms-and-privacy">Terms and Privacy</a></li>
+            <li><a href="/help">Help</a></li>
+          </ul>
         </div>
-        
-        <div class="item">
-            <h3 class="title-list">Company</h3>
-            <ul>
-                <li class="element-list">About</li>
-                <li>Contact</li>
-                <li>Press</li>
-                <li>Blog</li>
-                <li>Terms and privacy</li>
-                <li>Help</li>
-            </ul>
-        </div>
-        <div class="item">
-            <h3 class="title-list">Partners</h3>
-        </div>
-        <div class="final-item">
-                <h3 class="develop-by">DESIGN BY</h3>
-                <img src="img/see.png">
-        
-        </div>
-        <div class="item"> </div>
+
+        <span class="title-list">Partners</span>
+
+        <figure
+          class="no-margin flex flex-direction__column align-items__flex-end"
+        >
+          <figcaption>DESIGNED BY</figcaption>
+          <img src="/img/see.png" alt="" />
+        </figure>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

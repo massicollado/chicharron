@@ -1,31 +1,46 @@
-$line-color : #FF4E50;
-.contenedor{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    border-top-width: 1px;
-    border-top-color: $line-color;
-    border-top-style: solid;
-    margin-top: 5%;
-}
-.item{
-    flex-grow: 1;
-}
+body>footer{
+    border-top: 2px solid $color-light-red;
+    margin-top: 100px;
+    padding: 0 0.7rem;
+    
+    #company-title {
+        color: $color-light-red;
+        font-size: 16px;
+        font-family: $font-montserrat, sans-serif;
+    }
 
-.final-item{
-    flex-grow: 2;
-    text-align: right;
-}
-.develop-by{
-    font-family: -apple-system,;
-    font-size: 10px;
-    color: #CCCCCC;
-    letter-spacing: 1px;
-}
-.final-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-}
+    div.flex {
+        margin: 37px auto 45px;
 
+        > * {
+        flex: 1;
+        }
+    }
+
+    .title-list{
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    #options>ul{
+        list-style: none;
+        color: $color-brownish-grey;
+        font-size: 14px;
+        margin-top: 11px;
+
+        a{
+            text-decoration: none;
+            color: inherit;
+            line-height: 26px;
+        }
+
+    }
+
+    figcaption {
+        font-size: 10px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: $color-brownish-grey;
+    }
+    
+}

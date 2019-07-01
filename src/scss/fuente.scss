@@ -1,36 +1,4 @@
-$font-stack : Helvetica;
-$second-color : #FF4E50;
-$size: 16px;
-$title-list-size:14px;
-$font-list: Helvetica;
-$color-list: #444444;
-$size-list: 12px;
-$color-element-list: #999999;
-$line-height-el : -26px;
-$style-list: none;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300');
 
-.dream{
- font-family: 100% $font-stack;
- color: $second-color;
- font-size: $size;
-}
-
-.title-list{
-    font-family: $font-stack;
-    font-size: $title-list-size;
-    color: #444444;
- 
-}
- 
-li{
-    font-family: $font-list;
-    font-size: $size-list;
-    color: $color-element-list;
-    line-height: $line-height-el;
-    list-style: $style-list;
-}
-
-ul{
-    margin: 0;
-    padding: 0%;
-}
+$font-roboto: Roboto;
+$font-montserrat: Montserrat;

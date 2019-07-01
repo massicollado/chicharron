@@ -1,0 +1,37 @@
+@import "../fuente";
+@import "../color";
+
+article#interests {
+  text-align: center;
+  max-width: 482px;
+  margin: 0 auto;
+
+  header {
+    margin-bottom: 43px;
+  }
+
+  form {
+    label {
+      color: $color-darker-grey;
+      font-weight: 300;
+      font-size: 18px;
+    }
+    div {
+      margin-top: 25px;
+      display: flex;
+
+      input {
+        flex: 1;
+        border: 1px solid $color-darker-grey;
+        border-radius: 3px;
+        color: #999 !important;
+        margin-right: 5px;
+        padding: 0.5rem;
+      }
+
+      input::placeholder {
+        color: #999 !important;
+      }
+    }
+  }
+}
