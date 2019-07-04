@@ -1,0 +1,57 @@
+@import "../fuente";
+@import "../color";
+
+#activities-article {
+  margin: 75px;
+
+  header {
+    margin-bottom: 35px;
+  }
+
+  figure {
+    margin-bottom: 20px;
+    position: relative;
+
+    figcaption {
+      transform: translateY(-50%) translateX(-50%);
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      text-align: center;
+      color: $color-white;
+      font-weight: 700;
+      font-size: 23px;
+      font-family: $font-montserrat;
+      width: 80%;
+    }
+
+  }
+
+  @media (min-width: 500px) {
+    figure {
+      overflow: hidden;
+      width: 32%;
+
+      &.two {
+        width: 66%;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    margin-bottom: 15px;
+
+    #activities {
+      figure {
+        height: 120px;
+        overflow: hidden;
+
+        img {
+          transform: translateY(-7%);
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

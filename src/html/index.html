@@ -14,43 +14,49 @@
 
   <body>
     <header id="header">
-      <div>
-        <nav>
-          <h2>DREAMSHARE</h2>
-          <button>Log in</button>
-          <button>Sign up</button>
+      <div class="width-limiter">
+        <nav class="flex justify-content__space-between">
+          <h1>DREAMSHARE</h1>
+          <div class="flex">
+            <button>Log in</button>
+            <button class="secondbtn">Sign up</button>
+          </div>
         </nav>
-        <div>
+        <div id="header-message" class="text-align__center">
           <hgroup>
-            <h1>Share Your Holiday Drean</h1>
+            <h1>SHARE YOUR HOLIDAY DREAM</h1>
             <h3>And find the perfect partner to fulfill it</h3>
+            <button class="button filled">Find your holiday partner</button>
           </hgroup>
-
-          <button>Find your holiday partner</button>
         </div>
       </div>
     </header>
     <main>
       <section>
-        <article>
+        <article id="how-it-works">
           <header>
-            <h1>How it works?</h1>
+            <h1 class="text-align__center">How it works?</h1>
           </header>
-          <div></div>
+          <div class="images flex justify-content__space-around wrap"></div>
         </article>
 
-        <article>
+        <article id="partner" class="text-align__center">
           <header>
-            <h1>Meet a partner for your best</h1>
+            <h1 class="text-align__center">Meet a partner for your best</h1>
           </header>
-          <div></div>
-          <button>See other Partners</button>
+          <div class="images flex justify-content__space-around"></div>
+          <button class="button outlined">See other Partners</button>
         </article>
-        <article>
+        <article id="activities-article">
           <header>
-            <h1>Discover holiday activity <span>ideas</span></h1>
+            <h1 class="text-align__center">
+              Discover holiday activity <span>ideas</span>
+            </h1>
           </header>
-          <div></div>
+          <div
+            id="activities"
+            class="flex wrap justify-content__space-between"
+          ></div>
         </article>
         <article id="interests">
           <header>
@@ -59,7 +65,11 @@
           <form>
             <label for="interest">Hi! What are your holiday interests?</label>
             <div>
-              <input id= "interest"type="text" placeholder="Enter your interests" />
+              <input
+                id="interest"
+                type="text"
+                placeholder="Enter your interests"
+              />
               <button class="button filled">Search Partners</button>
             </div>
           </form>
@@ -92,5 +102,8 @@
         </figure>
       </div>
     </footer>
+    <script src="/js/partners.js"></script>
+    <script src="/js/how-it-works.js"></script>
+    <script src="/js/holiday-activities.js"></script>
   </body>
 </html>

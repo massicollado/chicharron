@@ -12,6 +12,13 @@
 .wrap {
   flex-wrap: wrap;
 }
+.text-align__ {
+  &center {
+    text-align: center;
+  }
+}
+
+
 .justify- {
   &content__ {
     &space-between {
@@ -56,6 +63,10 @@
     }
   }
 }
+figure.shadowed {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+}
 
 article {
   h1 {
@@ -76,6 +87,11 @@ article {
       background-color: $color-light-red;
       border: none;
       color: $color-white;
+    }
+    &.outlined{
+      color: $color-light-red;
+      border-color: $color-light-red;
+      border-width: 2px;
     }
   }
 }

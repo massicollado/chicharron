@@ -1,0 +1,80 @@
+@import "../fuente";
+@import "../color";
+
+header#header {
+  background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.45)),
+    url(/img/background.png);
+  background-size: cover;
+  height: 700px;
+  max-height: 100vh;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+
+  nav {
+    margin-left: 165px;
+    h1 {
+      font-family: $font-montserrat;
+      color: $color-white;
+      font-weight: 540;
+      font-size: 20px;
+    }
+
+    button {
+      color: $color-white;
+      height: 40px;
+      border-radius: 40px;
+      font-family: $font-montserrat, sans-serif;
+      padding: 0 1.7rem;
+      font-size: 14px;
+      font-weight: 700;
+      background-color: transparent;
+      border-color: transparent;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid $color-white;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  #header-message {
+    text-align: center;
+    color: $color-white;
+    margin: 0 auto;
+    max-width: 80%;
+    padding-top: 8rem;
+
+    hgroup {
+      justify-content: center;
+      align-content: center;
+
+      h1 {
+        font-family: $font-montserrat, sans-serif;
+        color: $color-white;
+        font-size: 50px;
+        width: 500px;
+        margin-left: 220px;
+      }
+      h3 {
+        font-family: $font-roboto, sans-serif;
+        color: $color-white;
+      }
+
+      .button {
+        height: 40px;
+        border-radius: 40px;
+        font-family: $font-montserrat, sans-serif;
+        padding: 0 1.7rem;
+        font-size: 14px;
+        font-weight: 700;
+
+        &.filled {
+          background-color: $color-light-red;
+          border: none;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
