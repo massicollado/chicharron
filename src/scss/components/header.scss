@@ -2,13 +2,19 @@
 @import "../color";
 
 header#header {
-  background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.45)),
+  background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.45)) no-repeat top,
     url(/img/background.png);
   background-size: cover;
   height: 700px;
   max-height: 100vh;
   margin-bottom: 4rem;
   padding-top: 2rem;
+  @media screen and(max-width: 500px) {
+    justify-content: center;
+    ul {
+      padding-left: 0;
+    }
+  }
 
   nav {
     margin-left: 165px;
